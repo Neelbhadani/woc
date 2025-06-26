@@ -5,7 +5,7 @@ from api.extensions import mongo, mail
 
 def create_app():
     app = Flask(__name__)
-    app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://localhost:27017/woc")
+    app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb+srv://woc:<db_password>@cluster0.ujqjf85.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
     app.config["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
     app.config["BASE_URL"] = os.getenv("BASE_URL")
